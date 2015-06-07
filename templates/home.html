@@ -13,7 +13,8 @@
     </a>
     {% endfor %}
   </p>
-  {{ object.body_html|safe }}
+  {{ object.body_html|safe|truncatewords:"50"|linebreaks }}
+  <a href="{% url "post_detail" slug=object.slug %}">read more</a>
 </div>
 {% endfor %}
 {% endblock %}
