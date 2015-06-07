@@ -6,7 +6,7 @@ from . import models
 class BlogIndex(generic.ListView):
     queryset = models.Post.objects.published()
     template_name = "home.html"
-    paginate_by = 2
+    paginate_by = 5
 
 
 class BlogDetail(generic.DetailView):
@@ -15,7 +15,7 @@ class BlogDetail(generic.DetailView):
 
 class TagIndex(generic.ListView):
     template_name = 'home.html'
-    paginate_by = 2
+    paginate_by = 5
 
     def get_queryset(self):
         slug = self.kwargs['slug']
