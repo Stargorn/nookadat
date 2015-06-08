@@ -48,3 +48,6 @@ class Post(models.Model):
         return reverse("post_detail", kwargs={"slug": self.slug})
 
 
+
+
+

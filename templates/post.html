@@ -1,5 +1,6 @@
 {% extends "base.html" %}
 {% load django_markdown %}
+{% load comments %}
 
 {% block blog_posts %}
 <div class="post">
@@ -15,3 +16,4 @@
   {{ object.body_html|safe }}
 </div>
 {% endblock %}
+  
